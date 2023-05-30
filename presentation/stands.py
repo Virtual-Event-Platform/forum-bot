@@ -104,8 +104,8 @@ class Stands:
         if len(images) == 0:
             chat.send_text(sender_id, standsText.no_images)
             return BackAndMenuButton(
-            Payload("/stand", _id=_id),
-        )
+                Payload("/stand", _id=_id),
+            )
         
         if minim:
             chat.send_quick_reply(
@@ -138,7 +138,6 @@ class Stands:
     def asset(self, sender_id, entity, url, filetype, **ext):
         chat.send_file_url(sender_id, url, filetype=filetype)
         _id = url.split('/')[-2]
-        print(_id)
         statUsecase.set(Stat(sender_id, asset=_id))
         return BackAndMenuButton(
             Payload("/stand/" + ("gallery" if filetype == "image" else "document") , _id=entity),

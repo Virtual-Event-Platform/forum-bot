@@ -12,6 +12,7 @@ class FicheMetierUseCase(ImplRepository):
             for fiche in self.get_fiches(_id=_id, keyword=keyword, domain=domain)
         ]
     
+
     def all_domains(self):
         return [
             domain.toQuickReply()

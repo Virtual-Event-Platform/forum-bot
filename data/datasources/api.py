@@ -37,7 +37,7 @@ class Api:
 
 
     def get_stands(self, _id=None, keyword=None, numero=None):
-        query_params = {"sort":"category.level"}
+        query_params = {"sort":"category.level,name"}
         if _id:
             query_params['filter']=f"(id = '{_id}'"
         if numero:
@@ -58,6 +58,7 @@ class Api:
     def get_assets(self, _id, _type):
         result = self.client.collection("assets").get_full_list(
             query_params={
+                'sort': '-updated',
                 'filter': f"(entity = '{_id}' && type = '{_type}')"
             }
         )
@@ -68,7 +69,7 @@ class Api:
     
 
     def get_fiches(self, _id=None, keyword=None, domain=None):
-        query_params = {}
+        query_params = {'sort': 'name'}
         if _id:
             query_params['filter']=f"(id = '{_id}')"
         if keyword:
