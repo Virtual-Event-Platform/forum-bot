@@ -6,7 +6,7 @@ class ImplRepository:
     def __init__(self, api: Api):
         self.api = api
 
-    def get_stands(self, _id=None, keyword=None, numero=None) -> list[Entity]:
+    def get_stands(self, _id=None, keyword=None, numero=None):
         try:
             return self.api.get_stands(_id=_id, keyword=keyword, numero=numero)
         except Exception as e:
