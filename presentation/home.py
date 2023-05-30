@@ -39,9 +39,9 @@ class Home:
             sender_id,
             homeText.text
         )
-        chat.send_file_url(
+        chat.send_file(
             sender_id,
-            f"{config.APP_URL}/asset/zavoka-logo.png",
+            "assets/private/zavoka-logo.png",
             Filetype.image
         )
         self.__persistant_menu(sender_id)
