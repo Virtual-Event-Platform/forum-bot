@@ -8,4 +8,7 @@ class StatUseCase(ImplRepository):
 
     def set(self, stat):
         return self.set_stats(stat)
+    
+    def do_kavio(self, sender_id, finish=False):
+        return self.do_kavio_stat(sender_id, finish)
         

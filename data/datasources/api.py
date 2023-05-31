@@ -102,3 +102,12 @@ class Api:
         if stat.fiche:
             data['fiche'] = stat.fiche
         self.client.collection("stats").create(data)
+
+    
+    def do_kavio_stat(self, sender_id, finish=False):
+        if not finish:
+            self.client.collection("kavio").create({"sender_id": sender_id})
+        else:
+            stat = self.client.collection("kavio").get_full_list(batch=1, query_params={"filter": f"sender_id = '{sender_id}'", "fileds:": "id"})
+            stat = stat[0].__dict__['collection_id']
+            self.client.collection("kavio").update(stat['id'], {"finish": True})

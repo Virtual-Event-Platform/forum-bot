@@ -1,10 +1,10 @@
 from ampalibe import Payload
 from ampalibe.ui import QuickReply
-from base import chat, kavioUseCase
-from domains.entity.kaviotext import KavioText
-from presentation.response import BackAndMenuButton
 from presentation.textes import TestKavioText
+from domains.entity.kaviotext import KavioText
 from ampalibe import async_simulate as simulate
+from base import chat, kavioUseCase, statUsecase
+from presentation.response import BackAndMenuButton
 
 testKavioText = TestKavioText()
 
@@ -53,6 +53,7 @@ class TestKavio:
 
 
     def start_part(self, sender_id, part=1, **ext):
+        statUsecase.do_kavio_stat(sender_id)
         chat.send_text(sender_id, testKavioText.part.get(f"part{part}"))
         chat.send_text(sender_id, f"Série 1\n{kavioUseCase.serie(part, 1)}")
         self._send_choice(sender_id, kavioUseCase.choice('A', 1, part, 1))
@@ -88,6 +89,7 @@ class TestKavio:
                 if kavio.partie < 3:
                     await simulate(sender_id, Payload("/test_kavio/part", part=kavio.partie+1))
                 else:
+                    statUsecase.do_kavio_stat(sender_id, finish=True)
                     self._result(sender_id)
                     return BackAndMenuButton(
                         title="Fiche métiers",

@@ -41,3 +41,11 @@ class ImplRepository:
         except Exception as e:
             print(e)
             return []
+
+
+    def do_kavio_stat(self, sender_id, finish=False):
+        try:
+            return self.api.do_kavio_stat(sender_id, finish)
+        except Exception as e:
+            print(e)
+            return []
