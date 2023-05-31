@@ -25,11 +25,11 @@ class Home:
                     payload=Payload("/fiche_metiers"),
                     image_url="https://img.icons8.com/officel/80/business.png"
                 ),
-                # Button(
-                #     title="Test Kavio",
-                #     payload=Payload("/test_kavio"),
-                #     image_url="https://img.icons8.com/ios/100/test-passed--v1.png"
-                # )   
+                Button(
+                    title="Test Kavio",
+                    payload=Payload("/test_kavio"),
+                    image_url="https://img.icons8.com/ios/100/test-passed--v1.png"
+                )   
             ]
         )
             
@@ -72,11 +72,11 @@ class Home:
                     payload=Payload("/fiche_metiers"),
                     image_url="https://img.icons8.com/officel/80/business.png",
                 ),
-                # QuickReply(
-                #     title="Test Kavio",
-                #     payload=Payload("/test_kavio"),
-                #     image_url="https://img.icons8.com/ios/100/test-passed--v1.png",
-                # )
+                QuickReply(
+                    title="Test Kavio",
+                    payload=Payload("/test_kavio"),
+                    image_url="https://img.icons8.com/ios/100/test-passed--v1.png",
+                )
             ],
             homeText.menu
         )

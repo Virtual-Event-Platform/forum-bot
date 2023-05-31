@@ -1,6 +1,6 @@
 import ampalibe
 from presentation import Home
-from . import stands, fiche_metiers
+from . import stands, fiche_metiers, test_kavio
 
 
 @ampalibe.command('/get_started')
