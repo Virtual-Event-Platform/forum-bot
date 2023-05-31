@@ -26,7 +26,7 @@ class Home:
                     image_url="https://img.icons8.com/officel/80/business.png"
                 ),
                 Button(
-                    title="Test Kavio",
+                    title="Test d'orientation",
                     payload=Payload("/test_kavio"),
                     image_url="https://img.icons8.com/ios/100/test-passed--v1.png"
                 )   
@@ -73,7 +73,7 @@ class Home:
                     image_url="https://img.icons8.com/officel/80/business.png",
                 ),
                 QuickReply(
-                    title="Test Kavio",
+                    title="Test d'orientation",
                     payload=Payload("/test_kavio"),
                     image_url="https://img.icons8.com/ios/100/test-passed--v1.png",
                 )
