@@ -18,11 +18,11 @@ class StandsText:
 
     list_stands = "Voici la liste des stands disponibles :"
 
-    no_stands = "Aucun stand disponible pour le moment"
+    no_stands = "Aucun résultat pour cette recherche"
 
     search_stands = "Veuillez saisir le nom du stand que vous recherchez :"
 
-    no_stand = "Aucune donnée pour ce stand"
+    no_stand = "Aucun résultat pour cette recherche"
 
     no_contact = "Aucune donnée de contact pour ce stand"
 
@@ -40,7 +40,7 @@ class FicheMetiersText:
 
     list_stands = "Voici la liste des fiches métiers disponibles :"
 
-    no_stands = "Aucune fiche métier disponible pour le moment"
+    no_stands = "Aucun résultat disponible pour cette recherche"
 
     search_fiche_metiers = "Veuillez saisir le nom de la fiche métier que vous recherchez :"
 
