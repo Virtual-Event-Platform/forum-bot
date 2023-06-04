@@ -50,7 +50,6 @@ class FicheMetier:
             chat.send_generic_template(
                 sender_id, 
                 fiches,
-                None if minim else 
                 [
                     QuickReply(
                         title="Facebook Lite ?",
@@ -74,7 +73,7 @@ class FicheMetier:
     
 
     def list_fiche_metiers(self, sender_id, keyword=None, minim=False, **ext):
-        self._fiche_metiers(sender_id, ficheMetierUseCase.get(minimal=minim), minim)
+        return self._fiche_metiers(sender_id, ficheMetierUseCase.get(minimal=minim), minim)
 
 
     def search_fiche_metiers(self, sender_id, keyword=None, minim=False, **ext):
@@ -83,7 +82,7 @@ class FicheMetier:
             query.set_action(sender_id, "/fiche_metiers/search")
             return
         query.set_action(sender_id, None)
-        self._fiche_metiers(sender_id, ficheMetierUseCase.get(minimal=minim, keyword=keyword), minim, search=True)
+        return self._fiche_metiers(sender_id, ficheMetierUseCase.get(minimal=minim, keyword=keyword), minim, search=True)
         
     
     def asset(self, sender_id, url, **ext):

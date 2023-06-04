@@ -5,17 +5,17 @@ stands = Stands()
 
 @ampalibe.command('/stands')
 def stands_(sender_id, **ext):
-    stands.menu(sender_id, **ext)
+    return stands.menu(sender_id, **ext)
 
 
 @ampalibe.command('/stands/list')
 def list_stands(sender_id, **ext):
-    stands.list_stands(sender_id, **ext)
+    return stands.list_stands(sender_id, **ext)
 
 
 @ampalibe.command('/stands/search')
 def search_stands(sender_id, **ext):
-    stands.search_stands(sender_id, **ext)
+    return stands.search_stands(sender_id, **ext)
 
 
 @ampalibe.action('/stands/search')

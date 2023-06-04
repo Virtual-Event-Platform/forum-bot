@@ -47,7 +47,6 @@ class Stands:
             chat.send_generic_template(
                 sender_id, 
                 stands,
-                None if minim else 
                 [
                     QuickReply(
                         title="Facebook Lite ?",
@@ -66,7 +65,7 @@ class Stands:
 
 
     def list_stands(self, sender_id, minim=False, **ext):
-        self._stands(sender_id, standUseCase.get(minimal=minim), minim)
+        return self._stands(sender_id, standUseCase.get(minimal=minim), minim)
         
         
     def search_stands(self, sender_id, keyword=None, minim=False, **ext):
@@ -75,7 +74,7 @@ class Stands:
             query.set_action(sender_id, "/stands/search")
             return
         query.set_action(sender_id, None)
-        self._stands(sender_id, standUseCase.get(keyword=keyword, minimal=minim), minim, search=True)
+        return self._stands(sender_id, standUseCase.get(keyword=keyword, minimal=minim), minim, search=True)
 
 
     def stand(self, sender_id, _id, **ext):
