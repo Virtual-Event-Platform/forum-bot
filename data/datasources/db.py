@@ -1,9 +1,10 @@
 from ampalibe import Model
+from base import singleton
 
 from conf import Configuration
 from domains.entity.kaviotext import KavioText
 
-
+@singleton
 class CustomModel(Model):
     def __init__(self,):
         super().__init__()

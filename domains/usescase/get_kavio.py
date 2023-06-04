@@ -1,7 +1,8 @@
+from base import singleton
 from data.repositories.kavio_repository import KavioImplRepository
 from domains.entity.kaviotext import KavioText
 
-
+@singleton
 class KavioUseCase(KavioImplRepository):
 
     __results = {

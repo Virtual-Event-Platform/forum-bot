@@ -1,4 +1,7 @@
+from base import singleton
 
+
+@singleton
 class KavioDataSource: 
     """ 
      TEST KAVIO DATA SOURCE 

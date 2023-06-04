@@ -1,4 +1,5 @@
 from pocketbase import PocketBase
+from base import singleton
 from domains.entity.stat import Stat
 from domains.entity.asset import Asset
 from domains.entity.domain import Domain
@@ -6,6 +7,7 @@ from domains.entity.entity import Entity
 from domains.entity.fiche import FicheMetier
 
 
+@singleton
 class Api:
     def __init__(self, url, user, password):
         self.client = PocketBase(url)

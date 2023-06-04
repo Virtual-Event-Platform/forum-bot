@@ -3,7 +3,7 @@ from ampalibe.ui import QuickReply
 from domains.entity.stat import Stat
 from presentation.textes import FicheMetiersText
 from presentation.response import BackAndMenuButton
-from base import chat, query, ficheMetierUseCase, statUsecase
+from injection import chat, query, ficheMetierUseCase, statUsecase
 
 fichemetierText = FicheMetiersText()
 

@@ -1,6 +1,6 @@
 import routes
 import ampalibe
-from base import chat
+from injection import chat
 from ampalibe.messenger import Action
 from presentation import BackAndMenuButton
 

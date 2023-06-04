@@ -3,7 +3,7 @@ from ampalibe.ui import QuickReply
 from presentation.textes import TestKavioText
 from domains.entity.kaviotext import KavioText
 from ampalibe import async_simulate as simulate
-from base import chat, kavioUseCase, statUsecase
+from injection import chat, kavioUseCase, statUsecase
 from presentation.response import BackAndMenuButton
 
 testKavioText = TestKavioText()

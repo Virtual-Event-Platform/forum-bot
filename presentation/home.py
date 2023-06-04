@@ -1,4 +1,4 @@
-from base import chat
+from injection import chat
 from ampalibe import Payload
 from ampalibe import Filetype
 from ampalibe.ui import QuickReply, Button

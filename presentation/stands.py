@@ -1,11 +1,11 @@
-from base import chat, query
+from injection import chat, query
 from ampalibe import Payload
 from ampalibe.ui import QuickReply
 from domains.entity.stat import Stat
 from presentation.textes import StandsText
 from ampalibe import async_simulate as simulate
 from presentation.response import BackAndMenuButton
-from base import standUseCase, assetUseCase, statUsecase
+from injection import standUseCase, assetUseCase, statUsecase
 
 standsText = StandsText()
 

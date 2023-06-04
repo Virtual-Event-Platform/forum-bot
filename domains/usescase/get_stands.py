@@ -1,6 +1,8 @@
+from base import singleton
 from data.repositories.repository import ImplRepository
 
 
+@singleton
 class StandUseCase(ImplRepository):
     def __init__(self, api):
         super().__init__(api)
