@@ -11,12 +11,13 @@ from domains.usescase.get_stands import StandUseCase
 from domains.usescase.get_fiches import FicheMetierUseCase
 
 
-chat = singleton(Messenger)()
 query = singleton(Model)()
+chat = singleton(Messenger)()
+api = Api(config.PB_URL, config.PB_USER, config.PB_PASSWORD)
 
-statUsecase = StatUseCase(Api(config.PB_URL, config.PB_USER, config.PB_PASSWORD))
-standUseCase = StandUseCase(Api(config.PB_URL, config.PB_USER, config.PB_PASSWORD))
-assetUseCase = AssetUseCase(Api(config.PB_URL, config.PB_USER, config.PB_PASSWORD))
-ficheMetierUseCase = FicheMetierUseCase(Api(config.PB_URL, config.PB_USER, config.PB_PASSWORD))
+statUsecase = StatUseCase(api)
+standUseCase = StandUseCase(api)
+assetUseCase = AssetUseCase(api)
+ficheMetierUseCase = FicheMetierUseCase(api)
 kavioUseCase =  KavioUseCase(KavioDataSource(), CustomModel())
 

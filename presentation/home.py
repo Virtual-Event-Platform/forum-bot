@@ -1,12 +1,10 @@
 from injection import chat
 from ampalibe import Payload
 from ampalibe import Filetype
+from presentation.textes import HomeText
 from ampalibe.ui import QuickReply, Button
-
-from conf import Configuration as config
 from ampalibe import async_simulate as simulate
 
-from presentation.textes import HomeText
 
 homeText = HomeText()
 
