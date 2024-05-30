@@ -37,11 +37,11 @@ class Home:
             sender_id,
             homeText.text
         )
-        chat.send_file(
-            sender_id,
-            "assets/private/zavoka-logo.png",
-            Filetype.image
-        )
+        # chat.send_file(
+        #     sender_id,
+        #     "assets/private/zavoka-logo.png",
+        #     Filetype.image
+        # )
         self.__persistant_menu(sender_id)
         await simulate(sender_id, "/")
 
