@@ -1,14 +1,12 @@
 class HomeText:
     text = """Bonjour
 
-Bienvenue à la 7ème édition du Forum de l'orientation et des métiers ! 🥳
+Bienvenue à la 8ème édition du Forum de l'orientation et des métiers ! 🥳
 Afin d'accéder aux différents programmes de l'événement, merci de suivre les instructions à chaque étape 🤗 
 
 En cas d'incompréhension ou de soucis techniques, n'hésitez pas à nous contacter au numéro : +261 34 61 780 78 
 
-En vous souhaitant un très bon forum ! 🙂 Zavoka Plateforme version minimaliste.
-
-https://zavoka.mg"""
+En vous souhaitant un très bon forum ! 🙂 """
 
     menu = "Que voulez-vous explorer ?"
     
